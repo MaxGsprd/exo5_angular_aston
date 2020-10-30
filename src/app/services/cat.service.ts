@@ -13,4 +13,8 @@ export class CatService {
   getAll(): Observable<Cat[]>{
     return this.http.get<Cat[]>('http://localhost:3000/cats');
   }
+
+  create(cat: Cat): Observable<Cat>  {
+    return this.http.post<Cat>('http://localhost:3000/cats', cat);
+  }
 }
