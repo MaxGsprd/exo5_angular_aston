@@ -1,0 +1,11 @@
+.cat-list {
+    width: 100%;
+}
+.cat-list th {
+    font-size: 1.5em;
+    color: #3f51b5;
+}
+
+.cat-list tr:nth-child(2n) {
+    background-color: #e0e0e2;
+}

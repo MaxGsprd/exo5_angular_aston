@@ -1,0 +1,21 @@
+<table class="cat-list" mat-table [dataSource]='cats'>
+    <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef>Nom</th>
+        <td mat-cell *matCellDef="let cat">{{cat.nom}}</td>
+    </ng-container>
+    <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef>Age</th>
+        <td mat-cell *matCellDef="let cat">{{cat.age}}</td>
+    </ng-container>
+    <ng-container matColumnDef="race">
+        <th mat-header-cell *matHeaderCellDef>Race</th>
+        <td mat-cell *matCellDef="let cat">{{cat.race}}</td>
+    </ng-container>
+    <ng-container matColumnDef="vivant">
+        <th mat-header-cell *matHeaderCellDef>Vivant</th>
+        <td mat-cell *matCellDef="let cat">{{cat.vivant}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
