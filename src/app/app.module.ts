@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './pages/form/form.component';
 import { CatsComponent } from './pages/cats/cats.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CatsComponent } from './pages/cats/cats.component';
     HeaderComponent,
     FooterComponent,
     FormComponent,
-    CatsComponent
+    CatsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
