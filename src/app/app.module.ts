@@ -17,7 +17,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     FooterComponent,
     FormComponent,
     CatsComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
