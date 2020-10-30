@@ -1,0 +1,39 @@
+{
+    "cats": [
+        {
+            "id": 1,
+            "nom": "clive",
+            "age": 4,
+            "race": "Abyssin",
+            "vivant": true
+        },
+        {
+            "id": 2,
+            "nom": "luffy",
+            "age": 7,
+            "race": "Bobtail japonais",
+            "vivant": true
+        },
+        {
+            "id": 3,
+            "nom": "zoro",
+            "age": 6,
+            "race": "British longhair",
+            "vivant": true
+        },
+        {
+            "id": 4,
+            "nom": "whitebeard",
+            "age": 17,
+            "race": "Sphynx",
+            "vivant": false
+        },
+        {
+            "id": 5,
+            "nom": "teach",
+            "age": 11,
+            "race": "Maine coon",
+            "vivant": true
+        }
+    ]
+}
