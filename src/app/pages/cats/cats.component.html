@@ -24,8 +24,8 @@
 </table>
 
 <div>
-    Filter par Id de chat:
-    <input [(ngModel)]='catId' type='text'>
-    <button (click)="callClick()">filtrer</button>
-    <p *ngIf="particularCat">{{particularCat.nom}}</p>
+    Trouver un chat avec une ID:
+    <input #catSearch type="text">
+    <button (click)='findCat(catSearch.value)'>Chercher</button>
+    <p *ngIf="particularCat">{{particularCat.id}} {{particularCat.nom}} {{particularCat.race}}</p>
 </div>

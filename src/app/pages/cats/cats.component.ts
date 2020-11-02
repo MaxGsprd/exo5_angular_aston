@@ -19,21 +19,21 @@ export class CatsComponent implements OnInit {
       this.cats = data;
       console.log(this.cats);
     })
-  
-  }
-  
-  callClick() {
-    if (this.catId = parseInt(this.catId,10)) {
-          this.catService.getById(this.catId).subscribe( data => {
-            console.log(data);
-            this.particularCat = data;
-          })
-    } else {
-      alert('entrez une ID valide');
-    } 
   }
 
   ngOnInit(): void {
+  }
+
+  findCat(value) {
+    console.log(value);
+    if (value = parseInt(value,10)) {
+      this.catService.getById(value).subscribe( data => {
+        console.log(data);
+        this.particularCat = data;
+      })
+    } else {
+      alert('entrez une ID valide');
+    } 
   }
 
 }
