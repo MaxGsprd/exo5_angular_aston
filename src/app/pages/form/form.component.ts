@@ -18,6 +18,7 @@ export class FormComponent implements OnInit {
     private router: Router
   ) {
       this.catForm = this.formBuilder.group({
+        id:[''],
         nom:[''],
         age:[''],
         race:[''],

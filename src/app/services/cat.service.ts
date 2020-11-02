@@ -16,7 +16,7 @@ export class CatService {
     return this.http.get<Cat[]>(this.url);
   }
 
-  getByid(id:number): Observable<Cat> {
+  getById(id:number): Observable<Cat> {
     return this.http.get<Cat>(`http://localhost:3000/cats/${id}`);
   }
 
@@ -30,4 +30,8 @@ export class CatService {
   //   return fetch(`http://localhost:3000/cats/${id}`, {
   //     method: 'DELETE'
   //   });
+
+  click() {
+    console.log('click!');
+  }
 }

@@ -10,19 +10,27 @@ import { Cat } from 'src/app/models/Cat';
 export class CatsComponent implements OnInit {
   
   cats: Cat[] = [];
-  displayedColumns: string[] = ['nom', 'age', 'race', 'vivant'];
+  displayedColumns: string[] = ['id','nom', 'age', 'race', 'vivant'];
   particularCat: Cat;
+  catId;
 
   constructor(private catService: CatService) {
     this.catService.getAll().subscribe( data => {
       this.cats = data;
       console.log(this.cats);
     })
-
-    this.catService.getByid(1).subscribe( data => {
-      console.log(data);
-      this.particularCat = data;
-   })
+  
+  }
+  
+  callClick() {
+    if (this.catId = parseInt(this.catId,10)) {
+          this.catService.getById(this.catId).subscribe( data => {
+            console.log(data);
+            this.particularCat = data;
+          })
+    } else {
+      alert('entrez une ID valide');
+    } 
   }
 
   ngOnInit(): void {
