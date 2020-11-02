@@ -8,13 +8,26 @@ import { Cat } from '../models/Cat';
 })
 export class CatService {
 
+  url:string = 'http://localhost:3000/cats';
+
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Cat[]>{
-    return this.http.get<Cat[]>('http://localhost:3000/cats');
+    return this.http.get<Cat[]>(this.url);
   }
 
-  create(cat: Cat): Observable<Cat>  {
-    return this.http.post<Cat>('http://localhost:3000/cats', cat);
+  getByid(id:number): Observable<Cat> {
+    return this.http.get<Cat>(`http://localhost:3000/cats/${id}`);
   }
+
+  // update()
+
+  create(cat: Cat): Observable<Cat>  {
+    return this.http.post<Cat>(this.url, cat);
+  }
+
+  // delete(id: number): Promise<any>{
+  //   return fetch(`http://localhost:3000/cats/${id}`, {
+  //     method: 'DELETE'
+  //   });
 }
